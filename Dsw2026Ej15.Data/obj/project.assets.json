@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Dsw2026Ej15.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Dsw2026Ej15.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Dsw2026Ej15.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dsw2026Ej15.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Dsw2026Ej15.Domain/Dsw2026Ej15.Domain.csproj",
+      "msbuildProject": "../Dsw2026Ej15.Domain/Dsw2026Ej15.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Dsw2026Ej15.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\NicoK\\.nuget\\packages\\": {}
@@ -32,8 +51,13 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\NicoK\\Dsw2026Ej15-Local\\Dsw2026Ej15.Domain\\Dsw2026Ej15.Domain.csproj": {
+              "projectPath": "C:\\Users\\NicoK\\Dsw2026Ej15-Local\\Dsw2026Ej15.Domain\\Dsw2026Ej15.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -50,6 +74,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "imports": [
           "net461",
