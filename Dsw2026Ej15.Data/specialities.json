@@ -1,0 +1,12 @@
+﻿[
+  {
+    "id": "8a1f3b78-3f66-4d68-8d6e-1c5b9c7a2f41",
+    "name": "Cardiologia",
+    "description": "Especialidad médica encargada del estudio, diagnóstico y tratamiento de las enfermedades del corazón."
+  },
+  {
+    "id": "f4d2c9a1-7b3e-4f8d-9c61-2e7a5d8b3c12",
+    "name": "Pediatria",
+    "description": "Especialidad médica que involucra la atención médica de bebés, niños y adolescentes."
+  }
+]
