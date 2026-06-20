@@ -6,20 +6,18 @@ namespace Dsw2026Ej15.Data;
 
 public class PersistenceInMemory : IPersistence
 {
-    // Listas en memoria RAM que van a sostener los datos vivos mientras la app corra
     private readonly List<Doctor> _doctors = new();
     private readonly List<Speciality> _specialities;
 
     public PersistenceInMemory()
     {
-        // Al nacer la clase, cargamos automáticamente las especialidades del JSON
         _specialities = LoadSpecialities();
     }
 
-    // Método privado exigido por el enunciado para levantar el JSON
+    // Método privado para levantar el JSON
     private List<Speciality> LoadSpecialities()
     {
-        // AppContext.BaseDirectory asegura encontrar el archivo en la carpeta bin/ de ejecución
+   
         var path = Path.Combine(AppContext.BaseDirectory, "specialities.json");
 
         if (!File.Exists(path))
@@ -29,7 +27,7 @@ public class PersistenceInMemory : IPersistence
 
         var options = new JsonSerializerOptions
         {
-            PropertyNameCaseInsensitive = true // Permite mapear minúsculas del JSON a C# sin romper nada
+            PropertyNameCaseInsensitive = true 
         };
 
         return JsonSerializer.Deserialize<List<Speciality>>(json, options)
@@ -52,7 +50,6 @@ public class PersistenceInMemory : IPersistence
     public Doctor? GetActiveDoctorById(Guid id)
         => _doctors.FirstOrDefault(d => d.Id == id && d.IsActive);
 
-    // Baja lógica (establecer IsActive en false) tal como pide el DELETE del enunciado
     public void DeactivateDoctor(Guid id)
     {
         var doctor = _doctors.FirstOrDefault(d => d.Id == id);

@@ -10,11 +10,9 @@ public class Speciality : BaseEntity
 {
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
-
-    // Constructor vacío obligatorio para que .NET pueda leer el archivo JSON
+    
     public Speciality() { }
 
-    // Constructor para cuando creamos especialidades validando datos
     public Speciality(string name, string description)
     {
         if (string.IsNullOrWhiteSpace(name))

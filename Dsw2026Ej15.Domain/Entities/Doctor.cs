@@ -13,10 +13,10 @@ public class Doctor : BaseEntity
     public bool IsActive { get; set; }
     public Speciality Speciality { get; set; } = null!;
 
-    // Constructor vacío requerido para la deserialización y pruebas
+    
     public Doctor() { }
 
-    // Constructor con las validaciones del enunciado (Name y LicenseNumber requeridos)
+    
     public Doctor(string name, string licenseNumber, Speciality speciality)
     {
         if (string.IsNullOrWhiteSpace(name))
@@ -27,6 +27,6 @@ public class Doctor : BaseEntity
         Name = name;
         LicenseNumber = licenseNumber;
         Speciality = speciality;
-        IsActive = true; // El enunciado dice: "se crea activo"
+        IsActive = true; 
     }
 }
